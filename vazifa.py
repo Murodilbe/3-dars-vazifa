@@ -16,5 +16,12 @@ while True:
     stop = input("Dasturni to'xtatish uchun 'stop' deb yozasizmi: ")
     if stop.lower() == "stop":
         break
-for user in users:
-    print(users)
+
+users = []
+
+
+with open("users.txt.", "w") as f:
+    for name, lastname, age, address, email, phone in users:
+        f.write(f"{name}, {lastname}, {age}, {address}, {email}, {phone}")
+
+print("users.txt fayliga saqlandi!")
